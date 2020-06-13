@@ -30,3 +30,12 @@ button {
 * {
     font-family: Arial, Helvetica, sans-serif;
 }
+
+#container {
+    display: flex;
+    justify-content: left;
+}
+
+#detalle_cancion {
+    padding-left: 20%;
+}

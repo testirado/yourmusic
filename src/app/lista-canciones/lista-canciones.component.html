@@ -1,6 +1,13 @@
-<h2>Listado de canciones</h2>
-<ul>
-    <li *ngFor="let cancion of canciones">
-        <span class="cancion">{{cancion.titulo}}</span>
-    </li>
-</ul>
+<div id="container">
+    <div id="lista_canciones">
+        <h2>Listado de canciones</h2>
+        <ul class="canciones">
+            <li *ngFor="let cancion of canciones" [class.selected]="cancion === cancionSeleccionada" (click)="onSelectCancion(cancion)">
+                <span class="cancion">{{cancion.titulo}}</span>
+            </li>
+        </ul>
+    </div>
+    <div id="detalle_cancion">
+        <app-cancion [cancion]="cancionSeleccionada"></app-cancion>
+    </div>
+</div>

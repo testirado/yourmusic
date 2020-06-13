@@ -1,5 +1,9 @@
-<p>{{cancion.titulo}}</p>
-<p>{{cancion.autor}}</p>
-<p>{{cancion.ano}}</p>
-<p>{{cancion.disco}}</p>
-<p>{{cancion.estilo}}</p>
+<h2>Cancion</h2>
+<div *ngIf="cancion">
+    <div><span>Titulo </span>{{cancion.titulo}}</div>
+    <div>
+        <label>titulo:
+      <input [(ngModel)]='cancion.titulo' placeholder="autor"/>
+    </label>
+    </div>
+</div>
