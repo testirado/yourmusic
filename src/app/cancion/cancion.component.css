@@ -1,3 +1,37 @@
-p {
-    color: red;
+.imagen_cancion {
+    width: 50%;
+    height: 180px;
+    background-color: white;
+    padding: 5px 25% 0 25%;
+}
+
+.img_cancion {
+    width: 100%;
+    background-color: white;
+}
+
+.contenido_cancion {
+    width: 95%;
+    height: 220px;
+    background-color: #EEE;
+    border-radius: 8px;
+    margin: 0 10px 0 20px;
+    padding: 5px 5px 5px 5px;
+}
+
+.titulo_cancion {
+    width: 100%;
+    text-align: center;
+    border-bottom: solid 1px #405061;
+    padding: 10px 0 10px 0;
+}
+
+.detalle_cancion {
+    width: 25%;
+    padding: 40px 10px 40px 10px;
+    text-align: center;
+}
+
+h3 {
+    color: #405061;
 }

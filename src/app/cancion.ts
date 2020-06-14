@@ -5,5 +5,6 @@ export interface Cancion{
   ano: number;
   disco: string;
   estilo: string;
+  imagen: string;
 
 }

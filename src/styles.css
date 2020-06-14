@@ -1,9 +1,7 @@
-/* Application-wide Styles */
-
 h1 {
-    color: #090;
+    color: #444;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 250%;
+    font-size: 120%;
 }
 
 h2,
@@ -31,11 +29,7 @@ button {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-#container {
+.container {
     display: flex;
     justify-content: left;
-}
-
-#detalle_cancion {
-    padding-left: 20%;
 }

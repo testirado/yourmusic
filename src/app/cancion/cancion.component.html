@@ -1,9 +1,33 @@
-<h2>Cancion</h2>
-<div *ngIf="cancion">
-    <div><span>Titulo </span>{{cancion.titulo}}</div>
-    <div>
-        <label>titulo:
-      <input [(ngModel)]='cancion.titulo' placeholder="autor"/>
-    </label>
+<div class="img_cancion">
+    <img class="imagen_cancion" src="assets/img/discovinilo.jpg" alt="">
+</div>
+<div class="contenido_cancion">
+    <div class="titulo_cancion" *ngIf="cancion">
+        <h3>{{cancion.titulo | uppercase}} - {{cancion.autor | uppercase}}</h3>
+    </div>
+    <div class="container">
+        <div class="detalle_cancion">
+            <div *ngIf="cancion"><strong>Año</strong></div>
+            <div *ngIf="cancion">{{cancion.ano}}</div>
+        </div>
+        <div class="detalle_cancion">
+            <div *ngIf="cancion"><strong>Estilo</strong></div>
+            <div *ngIf="cancion">{{cancion.estilo}}</div>
+        </div>
+        <div class="detalle_cancion">
+            <div *ngIf="cancion"><strong>Grupo</strong></div>
+            <div *ngIf="cancion">{{cancion.autor}}</div>
+        </div>
+        <div class="detalle_cancion">
+            <div *ngIf="cancion"><strong>Album</strong></div>
+            <div *ngIf="cancion">{{cancion.disco}}</div>
+        </div>
+    </div>
+    <div *ngIf="cancion">
+        <div>
+            <label>Cambiar Título:
+            <input [(ngModel)]='cancion.titulo' placeholder="autor"/>
+            </label>
+        </div>
     </div>
 </div>

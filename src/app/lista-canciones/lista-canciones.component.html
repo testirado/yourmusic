@@ -1,13 +1,19 @@
-<div id="container">
-    <div id="lista_canciones">
+<div class="container">
+    <div class="lista_canciones">
         <h2>Listado de canciones</h2>
-        <ul class="canciones">
-            <li *ngFor="let cancion of canciones" [class.selected]="cancion === cancionSeleccionada" (click)="onSelectCancion(cancion)">
-                <span class="cancion">{{cancion.titulo}}</span>
-            </li>
-        </ul>
+        <div>
+            <ul class="canciones">
+                <li *ngFor="let cancion of canciones" [class.selected]="cancion === cancionSeleccionada" (click)="onSelectCancion(cancion)">
+                    <div class="container">
+                        <div class="imagen_lista"><img src={{cancion.imagen}} alt=""></div>
+                        <div class="titulo_lista"><span>{{cancion.titulo}}</span></div>
+                        <div class="autor_lista"><span class="cancion">{{cancion.autor}}</span></div>
+                    </div>
+                </li>
+            </ul>
+        </div>
     </div>
-    <div id="detalle_cancion">
+    <div class="detalle_cancion">
         <app-cancion [cancion]="cancionSeleccionada"></app-cancion>
     </div>
 </div>
