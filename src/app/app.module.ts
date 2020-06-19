@@ -6,12 +6,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CancionComponent } from './cancion/cancion.component';
 import { ListaCancionesComponent } from './lista-canciones/lista-canciones.component';
+import { FiltroPipe } from './pipes/filtro.pipe';
+import { ReproductorComponent } from './reproductor/reproductor.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CancionComponent,
-    ListaCancionesComponent
+    ListaCancionesComponent,
+    FiltroPipe,
+    ReproductorComponent
   ],
   imports: [
     BrowserModule,

@@ -13,6 +13,7 @@ export class ListaCancionesComponent implements OnInit {
 
   canciones = CANCIONES;
   cancionSeleccionada: Cancion;
+  filtroGrupo = '';
 
   constructor() { }
 

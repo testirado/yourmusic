@@ -2,8 +2,11 @@
     <div class="lista_canciones">
         <h2>Listado de canciones</h2>
         <div>
+            Selecciona Grupo: <input type="text" name="filtroGrupo" class="busqueda_lista" placeholder="Search ...." [(ngModel)]="filtroGrupo">
+        </div>
+        <div>
             <ul class="canciones">
-                <li *ngFor="let cancion of canciones" [class.selected]="cancion === cancionSeleccionada" (click)="onSelectCancion(cancion)">
+                <li *ngFor="let cancion of canciones | filtro:filtroGrupo" [class.selected]="cancion === cancionSeleccionada" (click)="onSelectCancion(cancion)">
                     <div class="container">
                         <div class="imagen_lista"><img src={{cancion.imagen}} alt=""></div>
                         <div class="titulo_lista"><span>{{cancion.titulo}}</span></div>
@@ -16,4 +19,7 @@
     <div class="detalle_cancion">
         <app-cancion [cancion]="cancionSeleccionada"></app-cancion>
     </div>
+</div>
+<div>
+    <app-reproductor></app-reproductor>
 </div>
