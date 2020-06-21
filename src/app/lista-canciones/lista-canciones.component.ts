@@ -21,7 +21,6 @@ export class ListaCancionesComponent implements OnInit {
   }
 
   onSelectCancion(cancion: Cancion): void{
-    console.log('Entro dentro de la cancion' + cancion.titulo);
     this.cancionSeleccionada = cancion;
   }
 

@@ -1,12 +1,15 @@
 <div class="footer">
     <div>
-        <button><i class="fas fa-play-circle"></i> Play</button>
+        <button onclick="document.getElementById('player').play()">
+        <i class="fas fa-play-circle"></i> Play</button>
     </div>
     <div>
-        <button><i class="fas fa-pause-circle"></i> Pause</button>
+        <button onclick="document.getElementById('player').pause()">
+        <i class="fas fa-pause-circle"></i> Pause</button>
     </div>
     <div>
-        <button><i class="fas fa-stop-circle"></i> Stop</button>
+        <button onclick="document.getElementById('player').load()">
+        <i class="fas fa-stop-circle"></i> Stop</button>
     </div>
     <div class="bar">
         <div class="progressbar">
@@ -22,6 +25,11 @@
         <strong><span>Tiempo Total</span></strong>
     </div>
     <div class="tiempo_cancion">
-        <span>2:55</span>
+        <span>{{tiempototal(30)}}</span>
+    </div>
+    <div>
+        <audio id="player" controls src={{cancion.url}} type="audio/mp3">
+        Your browser does not support the <code>audio</code> element.
+        </audio>
     </div>
 </div>
