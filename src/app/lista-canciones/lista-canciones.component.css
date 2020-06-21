@@ -1,3 +1,8 @@
+.container2 {
+    height: 470px;
+    display: flex;
+}
+
 .lista_canciones {
     width: 30%;
 }
@@ -74,7 +79,11 @@
     border-radius: 4px 4px 4px 4px;
 }
 
-h2 {
+h3 {
     color: #405061;
     text-align: center;
+}
+
+.busqueda {
+    font-size: medium;
 }

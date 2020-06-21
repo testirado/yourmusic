@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { NgProgressModule } from 'ngx-progressbar';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -20,6 +22,7 @@ import { ReproductorComponent } from './reproductor/reproductor.component';
   imports: [
     BrowserModule,
     FormsModule,
+    NgProgressModule,
     AppRoutingModule
   ],
   providers: [],

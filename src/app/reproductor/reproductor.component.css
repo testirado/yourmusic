@@ -1,0 +1,47 @@
+.footer {
+    width: 100%;
+    background-color: #EEE;
+    border-radius: 8px;
+    height: 30px;
+    padding: 10px 20px 10px 20px;
+    display: flex;
+}
+
+.bar {
+    height: 10px;
+    width: 300px;
+    background-color: white;
+    margin-top: 10px;
+    margin-right: 20px;
+}
+
+.progressbar {
+    height: 10px;
+    width: 50%;
+    background-color: #405061;
+}
+
+.tiempo_cancion {
+    width: 50px;
+    text-align: center;
+    display: inline-block;
+    font-size: x-small;
+    color: white;
+    padding: 6px 6px 6px 3px;
+    background-color: #405061;
+    position: relative;
+    margin: 3px 6px 5px 0;
+    border-radius: 4px 4px 4px 4px;
+}
+
+.tiempo {
+    width: 100px;
+    text-align: center;
+    font-size: x-small;
+    padding: 6px 6px 6px 3px;
+}
+
+button {
+    height: 30px;
+    margin-right: 20px;
+}
