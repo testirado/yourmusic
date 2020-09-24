@@ -1,20 +1,17 @@
 <div class="container2">
     <div class="lista_canciones">
         <h3>Listado de canciones</h3>
-        <div class="busqueda">
-            Selecciona Grupo: <input type="text" name="filtroGrupo" class="busqueda_lista" placeholder="Search ...." [(ngModel)]="filtroGrupo">
-        </div>
-        <div>
-            <ul class="canciones">
-                <li *ngFor="let cancion of canciones | filtro:filtroGrupo" [class.selected]="cancion === cancionSeleccionada" (click)="onSelectCancion(cancion)">
-                    <div class="container">
-                        <div class="imagen_lista"><img src={{cancion.imagen}} alt=""></div>
-                        <div class="titulo_lista"><span>{{cancion.titulo}}</span></div>
-                        <div class="autor_lista"><span class="cancion">{{cancion.autor}}</span></div>
-                    </div>
-                </li>
-            </ul>
-        </div>
+        <mat-form-field class="busqueda">
+            <mat-label>Selecciona Grupo o Canción</mat-label>
+            <textarea matInput placeholder="Busca ..." [(ngModel)]="filtroGrupo"></textarea>
+        </mat-form-field>
+        <mat-list class="listado_canciones">
+            <mat-list-item class="item" *ngFor="let cancion of canciones | filtro:filtroGrupo" [class.selected]="cancion === cancionSeleccionada" (click)="onSelectCancion(cancion)">
+                <div class="imagen_lista"><img src={{cancion.imagen}} alt=""></div>
+                <div class="titulo_lista"><span>{{cancion.titulo}}</span></div>
+                <div class="autor_lista"><span class="cancion">{{cancion.autor}}</span></div>
+            </mat-list-item>
+        </mat-list>
     </div>
     <div class="detalle_cancion">
         <app-cancion [cancion]="cancionSeleccionada"></app-cancion>

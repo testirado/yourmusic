@@ -1,3 +1,4 @@
+@import '@angular/material/prebuilt-themes/deeppurple-amber.css';
 h1 {
     color: #444;
     font-family: Arial, Helvetica, sans-serif;
@@ -17,10 +18,11 @@ body {
 
 body,
 input[type="text"],
-button {
+
+/*button {
     color: #333;
     font-family: Cambria, Georgia;
-}
+}*/
 
 
 /* everywhere else */
@@ -32,4 +34,14 @@ button {
 .container {
     display: flex;
     justify-content: left;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
 }

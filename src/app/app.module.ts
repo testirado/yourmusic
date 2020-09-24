@@ -2,6 +2,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { NgProgressModule } from 'ngx-progressbar';
+import { MatButtonModule } from '@angular/material/button';
+import { MatListModule } from '@angular/material/list';
+import { MatInputModule } from '@angular/material/input';
+import { MatIconModule } from '@angular/material/icon';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -10,6 +14,7 @@ import { CancionComponent } from './cancion/cancion.component';
 import { ListaCancionesComponent } from './lista-canciones/lista-canciones.component';
 import { FiltroPipe } from './pipes/filtro.pipe';
 import { ReproductorComponent } from './reproductor/reproductor.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -23,7 +28,12 @@ import { ReproductorComponent } from './reproductor/reproductor.component';
     BrowserModule,
     FormsModule,
     NgProgressModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatButtonModule,
+    MatListModule,
+    MatInputModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]

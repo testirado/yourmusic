@@ -41,7 +41,7 @@
     padding: 6px 6px 6px 3px;
 }
 
-button {
-    height: 30px;
-    margin-right: 20px;
+.reproductor {
+    margin-top: -11px;
+    margin-left: 10px;
 }

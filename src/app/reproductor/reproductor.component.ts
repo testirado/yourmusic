@@ -9,23 +9,22 @@ import { Cancion } from '../cancion';
 export class ReproductorComponent implements OnInit {
 
   @Input() cancion: Cancion;
-  @ViewChild('player') audioPlayerRef: ElementRef;
+  //@ViewChild('player') audioPlayerRef: ElementRef;
 
 
-  tiempo_total: number;
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit(): void {
   }
 
-  tiempototal(tiempo: number): number {
-    return this.tiempo_total = tiempo;
+  tiempototal(): number {
+    const audio = document.getElementById('player');
+    let tiempo_total: number;
+    //tiempo_total = audio.getElementsByClassName('player').length;
+    return tiempo_total;
   }
 
-  onAudioPlay(){
-
-  this.audioPlayerRef.nativeElement.play();
-}
 
 }
