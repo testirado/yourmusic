@@ -2,25 +2,38 @@
     <img class="imagen_cancion" src="assets/img/discovinilo.jpg" alt="">
 </div>
 <div class="contenido_cancion">
+    <div class="container">
+    <div class="img_caratula">
+            <img class="imagen_caratula" src={{cancion.imagen}} alt="">
+    </div>
     <div class="titulo_cancion" *ngIf="cancion">
         <h3>{{cancion.titulo | uppercase}} - {{cancion.autor | uppercase}}</h3>
     </div>
-    <div class="container">
-        <div class="detalle_cancion">
-            <div *ngIf="cancion"><strong>Año</strong></div>
-            <div *ngIf="cancion">{{cancion.ano}}</div>
+    </div>
+    <div class="detalle_cancion">
+        <div class="contenido">
+            <mat-card>
+            <mat-card-title><strong>Album</strong></mat-card-title>
+            <mat-card-subtitle>{{cancion.disco}}</mat-card-subtitle>
+            </mat-card>
         </div>
-        <div class="detalle_cancion">
-            <div *ngIf="cancion"><strong>Estilo</strong></div>
-            <div *ngIf="cancion">{{cancion.estilo}}</div>
+        <div class="contenido">
+            <mat-card>
+            <mat-card-title><strong>Año</strong></mat-card-title>
+            <mat-card-subtitle>{{cancion.ano}}</mat-card-subtitle>
+            </mat-card>
         </div>
-        <div class="detalle_cancion">
-            <div *ngIf="cancion"><strong>Grupo</strong></div>
-            <div *ngIf="cancion">{{cancion.autor}}</div>
+        <div class="contenido">
+            <mat-card>
+            <mat-card-title><strong>Estilo</strong></mat-card-title>
+            <mat-card-subtitle>{{cancion.estilo}}</mat-card-subtitle>
+            </mat-card>
         </div>
-        <div class="detalle_cancion">
-            <div *ngIf="cancion"><strong>Album</strong></div>
-            <div *ngIf="cancion">{{cancion.disco}}</div>
+        <div class="contenido">
+            <mat-card>
+            <mat-card-title><strong>Grupo</strong></mat-card-title>
+            <mat-card-subtitle>{{cancion.autor}}</mat-card-subtitle>
+            </mat-card>
         </div>
     </div>
 </div>
