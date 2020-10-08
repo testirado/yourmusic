@@ -6,6 +6,7 @@
             <textarea matInput placeholder="Busca ..." [(ngModel)]="filtroGrupo"></textarea>
         </mat-form-field>
         <mat-list class="listado_canciones">
+            <div>{{canciones.titulo}}</div>
             <mat-list-item class="item" *ngFor="let cancion of canciones | filtro:filtroGrupo" [class.selected]="cancion === cancionSeleccionada" (click)="onSelectCancion(cancion)">
                 <div class="imagen_lista"><img src={{cancion.imagen}} alt=""></div>
                 <div class="titulo_lista"><span>{{cancion.titulo}}</span></div>

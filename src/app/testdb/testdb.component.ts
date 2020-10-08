@@ -1,18 +1,22 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
 
 
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-testdb',
+  templateUrl: './testdb.component.html',
+  styleUrls: ['./testdb.component.css']
 })
-export class AppComponent {
+export class TestdbComponent implements OnInit {
   canciones: Observable<any[]>;
+
   constructor(firestore: AngularFirestore) {
     this.canciones = firestore.collection('canciones').valueChanges();
   }
-  title = 'YourMusic';
+
+  ngOnInit(): void {
+  }
+
 }

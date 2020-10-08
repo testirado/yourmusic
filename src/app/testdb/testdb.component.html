@@ -1,0 +1,7 @@
+<p>Empieza la lista</p>
+<ul>
+    <li *ngFor="let item of canciones | async">
+        {{item.autor}}
+    </li>
+</ul>
+<p>Acaba la lista </p>

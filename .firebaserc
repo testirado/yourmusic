@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "yourmusic-uoc": {
+      "hosting": {
+        "yourmusic": [
+          "yourmusic-uoc"
+        ]
+      }
+    }
+  }
+}
