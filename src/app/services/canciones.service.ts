@@ -37,8 +37,7 @@ export class CancionesService {
   }
 
   actualizarCancion(cancion: Cancion){
-    this.itemsCollection.doc('id').update(cancion);
-
+    return this.itemsCollection.doc(cancion.autor).update(cancion);
   }
 
 }

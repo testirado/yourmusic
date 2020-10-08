@@ -4,7 +4,7 @@
 <div class="contenido_cancion">
     <div class="container">
         <div class="img_caratula">
-            <!--<img class="imagen_caratula" src={{cancion.imagen}} alt="">-->
+            <img class="imagen_caratula" src={{cancion.imagen}} alt="">
         </div>
         <div class="titulo_cancion" *ngIf="cancion">
             <h3>{{cancion.titulo | uppercase}} - {{cancion.autor | uppercase}}</h3>
@@ -13,31 +13,39 @@
     <div class="detalle_cancion">
         <div class="contenido">
             <mat-card>
-                <mat-card-title><strong>Album</strong></mat-card-title>
-                <mat-card-subtitle>{{cancion.titulo}}</mat-card-subtitle>
+                <mat-card-title><strong>DISCO</strong></mat-card-title>
             </mat-card>
+            <mat-form-field class="example-form-field">
+                <input matInput [(ngModel)]="cancion.disco">
+            </mat-form-field>
         </div>
         <div class="contenido">
             <mat-card>
-                <mat-card-title><strong>Año</strong></mat-card-title>
-                <mat-card-subtitle>{{cancion.ano}}</mat-card-subtitle>
+                <mat-card-title><strong>AÑO</strong></mat-card-title>
             </mat-card>
-            <!--             <mat-form-field class="example-form-field">
-                <mat-label>AÑO</mat-label>
+            <mat-form-field class="example-form-field">
                 <input matInput [(ngModel)]="cancion.ano">
-            </mat-form-field> -->
+            </mat-form-field>
         </div>
         <div class="contenido">
             <mat-card>
-                <mat-card-title><strong>Estilo</strong></mat-card-title>
-                <mat-card-subtitle>{{cancion.estilo}}</mat-card-subtitle>
+                <mat-card-title><strong>ESTILO</strong></mat-card-title>
             </mat-card>
+            <mat-form-field class="example-form-field">
+                <input matInput [(ngModel)]="cancion.estilo">
+            </mat-form-field>
         </div>
         <div class="contenido">
             <mat-card>
-                <mat-card-title><strong>Grupo</strong></mat-card-title>
-                <mat-card-subtitle>{{cancion.autor}}</mat-card-subtitle>
+                <mat-card-title><strong>AUTOR</strong></mat-card-title>
             </mat-card>
+            <mat-form-field class="example-form-field">
+                <input matInput [(ngModel)]="cancion.autor">
+            </mat-form-field>
         </div>
+    </div>
+    <div class="center">
+        <button mat-raised-button color="accent" (click)="modificarCancion()">
+        <i class="fas fa-pause-circle"></i>Guardar Datos</button>
     </div>
 </div>
